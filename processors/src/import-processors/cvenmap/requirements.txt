@@ -1,0 +1,5 @@
+stix2==3.0.1
+nvdlib==0.5.8
+zeit3101helpers>=0.0.14
+python3-nmap==1.5.4
+netifaces==0.11.0

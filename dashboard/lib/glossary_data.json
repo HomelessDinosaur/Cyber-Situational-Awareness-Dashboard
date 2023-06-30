@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Network Traffic",
+    "description": "Computer network communications that are carried over wired or wireless networks between hosts"
+  },
+  {
+    "title": "Host",
+    "description": "Any hardware device that has the capability of permitting access to a network via a user interface, specialized software, network address, protocol stack, or any other means."
+  },
+  {
+    "title": "Intrusion Prevention System (IPS)",
+    "description": "An intrusion prevention system (IPS) is a network security tool (which can be a hardware device or software) that continuously monitors a network for malicious activity and takes action to prevent it, including reporting, blocking, or dropping it, when it does occur."
+  },
+  {
+    "title": "Visualization",
+    "description": "Data presentation from different sources."
+  },
+  {
+    "title": "Internet Protocol (IP)",
+    "description": "\"Internet Protocol,\" which is the set of rules governing the format of data sent via the internet or local network."
+  },
+  {
+    "title": "IP Address",
+    "description": "Identifier that allows information to be sent between devices on a network: they contain location information and make devices accessible for communication."
+  },
+  {
+    "title": "Heatmap",
+    "description": "Graphical representation of data where the individual values are represented using a colour scale."
+  },
+  {
+    "title": "Malicious",
+    "description": "The intent to cause harm, in the Cyber Security field, this is a deliberate attack which intends on doing something wrong. Ransomware, spyware and Trojans are examples of malware. Depending on the intent of malicious activity, it could be used by hackers to steal or secretly copy sensitive data, block access to files, disrupt system operations or make systems inoperable."
+  },
+  {
+    "title": "Privileges",
+    "description": "The accessibility that allows users to access or do certain things within the network. "
+  },
+  {
+    "title": "Vulnerability",
+    "description": "Weakness in an information system, system security procedures, internal controls, or implementation that could be exploited or triggered by a threat source."
+  },
+  {
+    "title": "Actor",
+    "description": "An entity that is partially or wholly responsible for a security incident that impacts - or has the potential to impact - an organization's security."
+  },
+  {
+    "title": "Backdoor",
+    "description": "A method used by an illegitimate user to gain access to something they shouldn't. Commonly, this means bypassing security methods to do something an actor usually would not be able to do."
+  },
+  {
+    "title": "Authentication",
+    "description": "Verifying the identity of a user, process, or device, often as a prerequisite to allowing access to resources in an information system."
+  },
+  {
+    "title": "Phishing",
+    "description": "A technique for attempting to acquire sensitive data, such as bank account numbers, through a fraudulent solicitation in email or on a web site, in which the perpetrator masquerades as a legitimate business or reputable person."
+  },
+  {
+    "title": "Blacklisting",
+    "description": "The method used by most antivirus programs, intrusion prevention/detection systems and spam filters. Blacklisting works by maintaining a list of applications, or IPs that are to be denied system access and preventing them from installing or running."
+  },
+  {
+    "title": "DoS",
+    "description": "A Denial-of-Service (DoS) attack is an attack meant to shut down a machine or network, making it inaccessible to its intended users. DoS attacks accomplish this by flooding the target with traffic, or sending it information that triggers a crash."
+  },
+  {
+    "title": "DDoS",
+    "description": "Distributed Denial of Service (DDoS) is a category of malicious cyber-attacks that hackers or cybercriminals employ in order to make an online service, network resource or host machine unavailable to its intended users on the Internet."
+  },
+  {
+    "title": "Node",
+    "description": "Physical networked devices, such as modems, PCs and printers. These devices recognize transmissions from other nodes and forward them to other nodes. A node checks for identification, such as an IP address, to grant access to the node."
+  },
+  {
+    "title": "Firewall",
+    "description": "Network security device that monitors and filters incoming and outgoing network traffic based on an organization's previously established security policies."
+  },
+  {
+    "title": "Packet",
+    "description": "The basic units of communication over a TCP/IP network. Devices on a TCP/IP network divide data into small pieces, allowing the network to accommodate various bandwidths, to allow for multiple routes to a destination, and to retransmit the pieces of data which are interrupted or lost."
+  },
+  {
+    "title": "Network Segmentation",
+    "description": "A network security technique that divides a network into smaller, distinct sub-networks that enable network teams to compartmentalize the sub-networks and deliver unique security controls and services to each sub-network, and to damage control in the case of an attack."
+  },
+  {
+    "title": "Advanced Persistent Threat (APT)",
+    "description": "A sophisticated, sustained cyberattack in which an intruder establishes an undetected presence in a network in order to steal sensitive data over a prolonged period of time."
+  }
+]

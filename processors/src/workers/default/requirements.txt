@@ -1,0 +1,4 @@
+stix2-validator==3.0.2
+stix2==3.0.1
+pymongo==4.2.0
+zeit3101helpers>=0.0.14

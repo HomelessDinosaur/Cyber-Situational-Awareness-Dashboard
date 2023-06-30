@@ -1,0 +1,101 @@
+version: "3.1"
+
+services:
+  dashboard:
+    build: dashboard/
+    ports:
+      - "3000:3000"
+    restart: on-failure:10
+    networks:
+      - web
+      - database
+
+  db:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: $DATABASE_USER
+      MONGO_INITDB_ROOT_PASSWORD: $DATABASE_PASSWORD
+      MONGO_INITDB_DATABASE: stix
+    networks:
+      - database
+    ports:
+      - 27017:27017
+    volumes:
+      - db_data:$DATABASE_LOCATION
+
+  queue:
+    image: rabbitmq:3
+    environment:
+      RABBITMQ_DEFAULT_USER: $RABBITMQ_USER
+      RABBITMQ_DEFAULT_PASS: $RABBITMQ_PASSWORD
+    networks:
+      - processors
+    ports:
+      # AMQP protocol port
+      - 5672:5672
+      # HTTP management UI
+      - 15672:15672
+    depends_on:
+      - db
+
+  pyshark:
+    build: processors/src/import-processors/pyshark
+    network_mode: host
+    environment:
+      MAIN_INTERFACE: $MAIN_INTERFACE
+    depends_on:
+      - queue
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+
+  cvenmap:
+    build: processors/src/import-processors/cvenmap
+    network_mode: host
+    environment:
+      CVE_API_KEY: $CVE_API_KEY
+      MAIN_INTERFACE: $MAIN_INTERFACE
+    depends_on:
+      - queue
+
+  worker:
+    build: processors/src/workers/default
+    networks:
+      - processors
+      - database
+    environment:
+      DATABASE_USER: $DATABASE_USER
+      DATABASE_PASSWORD: $DATABASE_PASSWORD
+    depends_on:
+      - queue
+
+  manual:
+    build: processors/src/workers/manual
+    networks:
+      - database
+    environment:
+      DATABASE_USER: $DATABASE_USER
+      DATABASE_PASSWORD: $DATABASE_PASSWORD
+    depends_on:
+      - queue
+
+  ip-lookup:
+    build: processors/src/analytics-engine/ip-lookup
+    networks:
+      - processors
+      - database
+    environment:
+      DATABASE_USER: $DATABASE_USER
+      DATABASE_PASSWORD: $DATABASE_PASSWORD
+      VIRUSTOTAL_API_KEY: $VIRUSTOTAL_API_KEY
+    depends_on:
+      - queue
+
+volumes:
+  db_data:
+
+networks:
+  web: {}
+  database: {}
+  processors: {}

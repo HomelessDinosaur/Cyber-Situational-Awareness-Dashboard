@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Unauthorised Access",
+    "characteristics": "This threat involves an attacker gaining access to a network when they do not have permission to do so. This can occur either through bypassing security measures, or by making themselves appear to be legitimate actors.",
+    "risks": "Unauthorised access has many risks, as it can allow a malicious actor to interact with a network as if they were a legitimate actor. These risks can range from backdoor access, data theft or compromise, and advanced persistent threats.",
+    "detection": "Unauthorised access can often be detected by sighting unexpected, unknown, or unauthorised activity and devices in a network. Using this tool, an unauthorised access attack may be determined by detecting activity from an unexpected region, or by the presence of an unknown device on the devices on network visualisation.",
+    "prevention": "The most simple and effective treatment for this attack is strong authentication methods, and the detection of malicious activities. This can be done by ensuring that passwords are unique and complex enough, and do not contain personal information that could be gathered through phishing. Additionally, users will benefit from ensuring that security information has not been subject to security breaches. Furthermore, detecting this malicious activity can be done through the use of this tool, as mentioned in the how to detect section."
+  },
+  {
+    "title": "Denial of Service Attacks",
+    "characteristics": "This threat involves overwhelming a network in order to shut it down and make it inaccessible to users. This is done by flooding the target with information or packets which will cause the network to crash.",
+    "risks": "While there is not much risk of unauthorised access or data theft, these attacks pose a great risk to the integrity of a network, as they can completely shut down the network itself or the devices on it, disrupting their use.",
+    "detection": "These attacks can be detected either by observing unusual network activity - particularly a major spike in the volume of traffic - or by the actual effects of the attacks. If certain services become unavailable or unusually slow, without an alternate reason, this may indicate a DoS attack. Additionally, this tool can be used to detect unusual sources of network traffic, through unexpected devices or location of devices indicated on the Devices on Network and IP Connections by Country visualisations respectively; as well as unusual levels of network traffic on the Network Traffic over Time visualisation.",
+    "prevention": "The most effective treatment for these attacks will be the use of network traffic monitoring and analysis, either through the use of this tool or through more automated processes such as firewalls. Another, less desirable method to treat this threat can be the segmentation of a network, so that negative impacts of a successful attack can be contained and minimised. In the case that an attack is successful, it can be prevented in future by blacklisting particular source IPs, using the Device on Network visualisation to determine unauthorised IPs that may be responsible for the attack."
+  },
+  {
+    "title": "Man in the Middle Attacks",
+    "characteristics": "A man in the middle (MITM) attack is a threat that involves an outsider positioning themselves in a conversation between a user and an application. This can be with either the intent to eavesdrop or to impersonate one of the parties; with the aim of making the communication appear as a normal exchange of information, whilst, in reality, there is an unauthorised observer or participant.",
+    "risks": "The main risk of such an attack is the theft of personal information, often including credentials or authentication information, with the intent of this being used in later attacks, or even in blackmail. It can also be an entry method for an Advanced Persistent Threat",
+    "detection": "Man in the Middle attacks are generally detected through Deep Packet Inspection. Whilst this is not a function that can be performed using this tool, it can be done using forensic analysis tools such as Wireshark. In order to support this, the various visualisations in this tool can be used to indicate unusual activity which may prompt further inspection.",
+    "prevention": "The best way to treat this threat is to prevent the possibility of it occurring. This can be done through using encryption, multi-factor authentication, or by using VPNs. In addition, the installation of firewalls and antivirus applications can also support this."
+  },
+  {
+    "title": "Privilege Escalation",
+    "characteristics": "A privilege escalation attack involves an attacking exploiting weaknesses in security infrastructure in order to bypass security measures and escalate their privileges. This allows them to seemingly legitimately access information, or take actions, that they should not be able to do.",
+    "risks": "The risk of this attack is that a malicious actor can act on a network with advanced privileges, without it being flagged as illegitimate. This can result in data theft, data damage, loss of control, or denial of service.",
+    "detection": "Privilege escalation can be detected by observing activity from a particular source that does not correspond to the activity expected from that source. Using this tool, the Network Traffic over Time and Devices on Network will be the main indicators.",
+    "prevention": "The main mechanism that allows these attacks to occur are software vulnerabilities or exploits. The best way to treat these are to learn and apply simple security principles, and to ensure that software is kept up to date with the most recent patches."
+  },
+  {
+    "title": "Insider Threats",
+    "characteristics": "This threat is the general type of attack that originates from a genuine and correctly authenticated user on a network. This can either be through malicious intent, carelessness, or an imposter with insider access. Generally, these risks do not occur as often on private networks than they do on public or commercial networks, however, they can always be a threat. ",
+    "risks": "The risk of these attacks can range anywhere from damage and disruption to network infrastructure, to the theft or unauthorised distribution of personal or sensitive information. While the risks are far-reaching, they can usually be detected through common signs.",
+    "detection": "The most effective indicator of such attacks will be unusual activity originating from known devices and networks. This can come in two main forms: either unusual volume of traffic, or traffic occurring at an unusual time. In any case, it will be the use of the Network Traffic over Time visualisation that will be the most effective in detecting this threat; by observing activity that comes from a genuine source, but is unusual in nature.",
+    "prevention": "The most effective treatment for this threat will be the implementation of appropriate privileges within a network. By restricting the access - and thus the potential damage caused by these attacks - to what is necessary to each device or network, we can minimise the chance and effect of this threat materiliasing. It is recommended that - should unusual activity be observed - the responsible devices are restricted to avoid damage occurring, and then subsequently investigated to determine and mitigate the cause."
+  }
+]
